@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/tool.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<span>第一题： arr = [6,5,7,4,8] 实现逆序 </span>
+		<button type="button" id="arrayRev">数组逆序</button>
+		<br>
+		<span>第二题： 123实现进制转换 </span>
+		<button type="button" id="con">进制转换</button>
+		<br>
+		<span>第三题： 字符串”AAAabc11  +!@”实现个数统计 </span>
+		<button type="button" id="cou">个数统计</button>
+		<br>
+		<span>第四题： 有序数组[1,5,7,22,87]实现插入18后再排序 </span>
+		<button type="button" id="insert">排序</button>
+		<br>
+		<span>第五题： 字符串：“aabccdeefff”去重后是</span>
+		<button type="button" id="remove">去重</button>
+	</body>
+</html>
+<script type="text/javascript">
+	var arrayRev = document.getElementById("arrayRev");
+	var arr = [6,5,7,4,8];
+	arrayRev.onclick = function(){
+		var p = document.createElement("p");
+		p.innerHTML = "逆序后"+arrayReverse(arr);
+		document.body.appendChild(p);
+	}
+	var arrayRev = document.getElementById("con");
+	con.onclick = function(){
+		var p = document.createElement("p");
+		p.innerHTML = "转换2进制："+convert(123,2)+" 转换8进制："+convert(123,8)+" 转换16进制："+convert(123,16);
+		document.body.appendChild(p);
+	}
+	var cou = document.getElementById("cou");
+	var str = "AAAabc11  +!@";
+	cou.onclick = function(){
+		var p = document.createElement("p");
+		p.innerHTML = countNum(str);
+		document.body.appendChild(p);
+	}
+	var insert = document.getElementById("insert");
+	var a = [1,5,7,22,87];
+	var num = 18;
+	insert.onclick = function(){
+		var p = document.createElement("p");
+		p.innerHTML = "插入"+num+"后排序结果为"+ insertNum(a,num);
+		document.body.appendChild(p);
+	}
+	var remove = document.getElementById("remove");
+	var str1 = "aabccdeefff";
+	remove.onclick = function(){
+		var p = document.createElement("p");
+		p.innerHTML = "字符串aabccdeefff去重后："+ removeRepeat(str1);
+		document.body.appendChild(p);
+	}
+
+</script>
